@@ -13,7 +13,8 @@
 | scene.json / game.json 格式 | 完成 | 沿用 Agent Wiki W02，增加 `movable` 與 `references` |
 | `roomquest/verifier.py` | 完成 | 規則驗證，不呼叫 AI；有測試案例 |
 | `roomquest/play.py` + 玩家介面 | 完成 | Gradio；答案只留在伺服器端；記錄遊玩事件 |
-| 真實教室場景 | 進行中 | 目前只有 B305 **示意案例**，尚未實際遊玩 |
+| 真實教室場景 B0203 | 測試中 | 2026-11-24 現場拍攝、主持人確認 16 個物品；三關已通過驗證，**尚未有人實際遊玩** |
+| 示意場景 B305 | 示意案例 | 測試與 Colab 示範用，非真實教室 |
 | `planner.py`（AI 出題） | 未開始 | AISuite + 兩階段規劃 + Reflection |
 | `parser.py`（照片解析） | 未開始 | 視覺模型；失敗時改由主持人手動輸入 |
 | 主持人介面 | 未開始 | 編輯場景、生成、驗證報告、核准匯出 |
@@ -24,7 +25,8 @@
 pip install -r requirements.txt
 python -m pytest -q                                    # 執行所有測試
 python -m roomquest.verifier data/scenes/classroom-b305/scene.json data/scenes/classroom-b305/game.json
-python app_player.py                                   # http://127.0.0.1:7860
+python app_player.py                                   # B0203，http://127.0.0.1:7860
+python app_player.py --scene-dir data/scenes/classroom-b305   # 示意場景
 python app_player.py --share                           # 產生公開連結（約一週後失效）
 ```
 
@@ -78,6 +80,10 @@ Colab：開啟 `notebooks/RoomQuest_01_verifier_player.ipynb`，從上到下執�
 | `NAME_LEAK` / `ANSWER_IN_CLUE` | warning | 線索直接寫出物品名稱或答案 |
 
 **限制**：唯一性只涵蓋主持人已確認的物品。照片沒拍到的相似物品、玩家對文字的不同理解，仍需要主持人在現場確認。
+
+## 主持人確認紀錄
+
+scene.json 的 `confirmation_log` 記錄「照片判讀」和「現場確認」不一致的地方，例如 B0203 的通風孔照片判讀為 14 條，現場確認為 16 條。這些是報告中「照片解析準確度」與「為什麼需要主持人確認」的依據。
 
 ## 遊玩紀錄
 

@@ -1,0 +1,47 @@
+{
+  "game_id": "classroom-b0203-v1",
+  "scene_id": "classroom-b0203",
+  "title": "B0203 的四位數密碼",
+  "status": "測試中",
+  "story": "B0203 教室裡藏著一組四位數密碼。只在黑板牆、窗邊角落、講桌和前門附近尋找；全程只需要用眼睛觀察，不要觸碰任何設備。",
+  "levels": [
+    {
+      "step": 1,
+      "clue": "黑板上唯一一張粉紅色的紙，提醒大家每天什麼時候要擦桌椅。括號裡分機號碼的最後一個數字是多少？",
+      "references": [
+        {"object_id": "obj_01", "constraints": {"color": "粉紅色", "use": "提醒擦桌椅"}}
+      ],
+      "actions": ["observe", "read"],
+      "answer_type": "number",
+      "answer": "6",
+      "answer_source": {"object_id": "obj_01", "field": "attributes.extension", "transform": "last_digit"},
+      "hints": ["它貼在黑板上，顏色很顯眼。", "看黑板右上角。", "看最後括號裡的分機號碼，取最後一個數字。"]
+    },
+    {
+      "step": 2,
+      "clue": "窗邊角落的高處有一個能開門的白色箱子。數數看它側面一共有幾條「直的」通風孔？",
+      "references": [
+        {"object_id": "obj_02", "constraints": {"color": "白色", "region": "窗邊角落"}}
+      ],
+      "actions": ["observe", "count"],
+      "answer_type": "number",
+      "answer": "16",
+      "answer_source": {"object_id": "obj_02", "field": "attributes.vertical_vents", "transform": "identity"},
+      "hints": ["往窗戶那一側的高處看。", "黑板右邊、窗簾上方的白色箱子。", "只數直的，上下兩排加起來。"]
+    },
+    {
+      "step": 3,
+      "clue": "離開前，看看前門外牆上寫著教室編號的牌子。編號的最後一個數字是什麼？",
+      "references": [
+        {"object_id": "obj_07", "constraints": {"region": "前門外", "use": "標示教室"}}
+      ],
+      "actions": ["observe", "read"],
+      "answer_type": "number",
+      "answer": "3",
+      "answer_source": {"object_id": "obj_07", "field": "attributes.room", "transform": "last_digit"},
+      "hints": ["答案不在教室裡面。", "走到前門外，看門旁的牆。", "看最上面那塊牌子的教室編號。"]
+    }
+  ],
+  "final_code": "6163",
+  "final_code_from": [1, 2, 3]
+}

@@ -1,0 +1,116 @@
+{
+  "scene_id": "classroom-b0203",
+  "title": "長庚大學 B0203 教室",
+  "status": "測試中",
+  "source": "2026-11-24 現場拍攝 13 張照片；物品與數值由主持人（李怡萱）現場確認",
+  "play_area": "黑板牆、窗邊角落、講桌、前門外（教室後半部不在遊戲範圍）",
+  "regions": ["黑板右上角", "黑板上方", "黑板下方", "黑板溝槽", "前門旁", "前門外", "窗邊角落", "講桌", "窗邊牆", "天花板"],
+  "objects": [
+    {
+      "id": "obj_01", "name": "粉紅色公告", "category": "公告", "use": ["提醒擦桌椅"],
+      "color": "粉紅色", "region": "黑板右上角", "count": 1,
+      "text": "請同學於每日下午第一堂課前，自行以消毒水擦拭課桌椅。……請洽總務處補充。（分機：5036）總務處關心您！",
+      "attributes": {"extension": "5036"}, "relations": [{"type": "on", "object": "obj_11"}],
+      "touchable": false, "movable": false, "dynamic": false, "confirmed": true
+    },
+    {
+      "id": "obj_02", "name": "白色壁掛鐵箱", "category": "鐵箱", "use": ["收納設備"],
+      "color": "白色", "region": "窗邊角落", "count": 1, "text": null,
+      "attributes": {"vertical_vents": 16, "horizontal_vents": 2, "has_door": true}, "relations": [],
+      "touchable": false, "movable": false, "dynamic": false, "confirmed": true
+    },
+    {
+      "id": "obj_03", "name": "板擦機", "category": "板擦機", "use": ["清潔板擦"],
+      "color": "白色", "region": "前門旁", "count": 1, "text": "Point DF-168",
+      "attributes": {"brand": "Point", "model": "DF-168"}, "relations": [],
+      "touchable": false, "movable": false, "dynamic": false, "confirmed": true
+    },
+    {
+      "id": "obj_04", "name": "無線基地台", "category": "無線基地台", "use": ["提供無線網路"],
+      "color": "白色", "region": "黑板上方", "count": 1, "text": "5.2.5",
+      "attributes": {"brand": "aruba", "label": "5.2.5"}, "relations": [],
+      "touchable": false, "movable": false, "dynamic": false, "confirmed": true
+    },
+    {
+      "id": "obj_05", "name": "講桌", "category": "講桌", "use": ["操作電腦"],
+      "color": "銀色", "region": "講桌", "count": 1, "text": null,
+      "attributes": {}, "relations": [],
+      "touchable": false, "movable": false, "dynamic": false, "confirmed": true
+    },
+    {
+      "id": "obj_06", "name": "講桌上的提醒紙條", "category": "紙條", "use": ["提醒消毒方式"],
+      "color": "白色", "region": "講桌", "count": 1,
+      "text": "酒精請噴灑在抹布上後再進行消毒擦拭設備……以免造成設備異常損壞。教具室 ext. 5082 啟",
+      "attributes": {"extension": "5082"}, "relations": [{"type": "on", "object": "obj_05"}],
+      "touchable": false, "movable": false, "dynamic": false, "confirmed": true
+    },
+    {
+      "id": "obj_07", "name": "前門外門牌", "category": "門牌", "use": ["標示教室"],
+      "color": "深灰色", "region": "前門外", "count": 1, "text": "B0203 教室 / B0203 CLASSROOM",
+      "attributes": {"room": "B0203"}, "relations": [],
+      "touchable": false, "movable": false, "dynamic": false, "confirmed": true
+    },
+    {
+      "id": "obj_08", "name": "課程表與公佈欄", "category": "課程表", "use": ["公告課程"],
+      "color": "白色", "region": "前門外", "count": 1, "text": "課程表 Class Schedule / 公佈欄 Bulletin Board",
+      "attributes": {}, "relations": [],
+      "touchable": false, "movable": false, "dynamic": true, "confirmed": true
+    },
+    {
+      "id": "obj_09", "name": "投影機", "category": "投影機", "use": ["投影"],
+      "color": "黑色", "region": "天花板", "count": 1, "text": "EPSON",
+      "attributes": {"brand": "EPSON"}, "relations": [],
+      "touchable": false, "movable": false, "dynamic": false, "confirmed": true
+    },
+    {
+      "id": "obj_10", "name": "投影布幕盒", "category": "投影布幕", "use": ["投影"],
+      "color": "白色", "region": "黑板上方", "count": 1, "text": "COMLITE",
+      "attributes": {"brand": "COMLITE"}, "relations": [],
+      "touchable": false, "movable": false, "dynamic": false, "confirmed": true
+    },
+    {
+      "id": "obj_11", "name": "黑板", "category": "黑板", "use": ["寫字"],
+      "color": "綠色", "region": "黑板牆", "count": 1, "text": null,
+      "attributes": {}, "relations": [],
+      "touchable": false, "movable": false, "dynamic": true, "confirmed": true
+    },
+    {
+      "id": "obj_12", "name": "粉筆盒", "category": "粉筆盒", "use": ["裝粉筆"],
+      "color": "綠色", "region": "黑板溝槽", "count": 1, "text": null,
+      "attributes": {}, "relations": [],
+      "touchable": true, "movable": true, "dynamic": false, "confirmed": true
+    },
+    {
+      "id": "obj_13", "name": "板擦", "category": "板擦", "use": ["擦黑板"],
+      "color": "黃色", "region": "黑板溝槽", "count": 1, "text": null,
+      "attributes": {}, "relations": [],
+      "touchable": true, "movable": true, "dynamic": false, "confirmed": true
+    },
+    {
+      "id": "obj_14", "name": "網路孔面板", "category": "網路孔", "use": ["接網路線"],
+      "color": "米色", "region": "黑板下方", "count": 1, "text": "2 3",
+      "attributes": {"labels": "23"}, "relations": [],
+      "touchable": false, "movable": false, "dynamic": false, "confirmed": true
+    },
+    {
+      "id": "obj_15", "name": "滑鼠", "category": "滑鼠", "use": ["操作電腦"],
+      "color": "黑色", "region": "講桌", "count": 1, "text": "FUJITSU",
+      "attributes": {"brand": "FUJITSU"}, "relations": [{"type": "on", "object": "obj_05"}],
+      "touchable": false, "movable": true, "dynamic": false, "confirmed": true
+    },
+    {
+      "id": "obj_16", "name": "窗邊牆的窗戶", "category": "窗戶", "use": ["採光"],
+      "color": "米色窗簾", "region": "窗邊牆", "count": 5, "text": null,
+      "attributes": {}, "relations": [],
+      "touchable": false, "movable": false, "dynamic": false, "confirmed": false
+    }
+  ],
+  "confirmation_log": [
+    {"object_id": "obj_01", "field": "attributes.extension", "photo_reading": "5006（照片放大後判讀）", "host_confirmed": "5036"},
+    {"object_id": "obj_02", "field": "attributes.vertical_vents", "photo_reading": "每排 7 條，共 14 條", "host_confirmed": "每排 8 條，共 16 條；另有橫的 2 條"},
+    {"object_id": "obj_03", "field": "category", "photo_reading": "擴音器", "host_confirmed": "板擦機（Point DF-168）"},
+    {"object_id": "obj_04", "field": "category", "photo_reading": "無法判斷（可能是時鐘或喇叭）", "host_confirmed": "主持人也不確定；近拍可見 aruba 標誌與手寫 5.2.5，判定為無線基地台"},
+    {"object_id": "obj_06", "field": "attributes.extension", "photo_reading": "ext. 5…（紙條捲起看不到）", "host_confirmed": "5082"},
+    {"object_id": "obj_16", "field": "count", "photo_reading": "5 扇", "host_confirmed": "尚未確認"}
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "game_id": "classroom-b305-demo",
+  "scene_id": "classroom-b305",
+  "title": "教室 B305 的三個數字",
+  "status": "示意案例",
+  "story": "有人在教室裡留下三個數字，組合起來就是儲物櫃的密碼。只用眼睛觀察，不需要移動任何東西。",
+  "levels": [
+    {
+      "step": 1,
+      "clue": "前門旁有一面可以釘東西的板子，數一數上面釘了幾張紙。",
+      "references": [
+        {"object_id": "obj_01", "constraints": {"region": "前門旁", "use": "釘東西"}}
+      ],
+      "actions": ["observe", "count"],
+      "answer_type": "number",
+      "answer": "3",
+      "answer_source": {"object_id": "obj_01", "field": "attributes.paper_count", "transform": "identity"},
+      "hints": ["它通常用來公告事情。", "在前門附近的牆上。", "數公告欄上的紙張數量。"]
+    },
+    {
+      "step": 2,
+      "clue": "窗邊有一排藍色、可以坐的物品，數量正好等於上一關的答案。在它們上面找到唯一可以裝水的紅色物品，旁邊那本書的封面印著什麼數字？",
+      "references": [
+        {"object_id": "obj_02", "constraints": {"region": "窗邊", "color": "藍色", "use": "坐", "count": "$step1"}},
+        {"object_id": "obj_03", "constraints": {"color": "紅色", "use": "裝水", "on": "obj_02"}},
+        {"object_id": "obj_05", "constraints": {"category": "書", "next_to": "obj_03"}}
+      ],
+      "actions": ["observe", "read"],
+      "answer_type": "number",
+      "answer": "7",
+      "answer_source": {"object_id": "obj_05", "field": "attributes.cover_number", "transform": "identity"},
+      "hints": ["先找窗邊一排可以坐的藍色物品。", "紅色目標可以裝水。", "答案在紅色水壺旁邊那本書的封面。"]
+    },
+    {
+      "step": 3,
+      "clue": "離開前看看後門，門牌上的最後一個數字，就是最後一塊拼圖。",
+      "references": [
+        {"object_id": "obj_07", "constraints": {"category": "門牌", "region": "後門"}}
+      ],
+      "actions": ["observe", "read"],
+      "answer_type": "number",
+      "answer": "5",
+      "answer_source": {"object_id": "obj_07", "field": "text", "transform": "last_digit"},
+      "hints": ["最後一關和門有關。", "看後門門牌最後一個數字。"]
+    }
+  ],
+  "final_code": "375",
+  "final_code_from": [1, 2, 3]
+}
